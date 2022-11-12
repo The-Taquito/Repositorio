@@ -1,7 +1,9 @@
  public class Quoridor {
     public static void main(String[] args) {
-    System.out.println("hola mundo");
+    Variables obj1 = new Variables();
 
-     int 19;
+    obj1.ImprimirTablero();
+
+     
     }
 }
