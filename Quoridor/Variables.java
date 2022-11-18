@@ -1,6 +1,15 @@
+import java.io.*;
 public class Variables {
     String jug1= "+";
+    String jug1Confirm = "True";
+    int decision;
+    int decisionMovimiento;
+    int coordenadaY1 = 9;
+    int coordenadaX1 = 1;
+
     String jug2= "^";
+    String juego = "True";
+    String historial;
     String[][] tablero ={{"-"," ","-"," ","-"," ","-"," ","-"," ","-"," ","-"," ","-"," ","-"," ","-"},
                         {"|"," ","|"," ","|"," ","|"," ","|",jug1,"|"," ","|"," ","|"," ","|"," ","|"},
                         {"-"," ","-"," ","-"," ","-"," ","-"," ","-"," ","-"," ","-"," ","-"," ","-"},
@@ -28,6 +37,15 @@ public class Variables {
         }
         System.out.println();
        } 
+    }
+    public void MoverAdelante(){
+        tablero[coordenadaX1][coordenadaY1]=" ";
+        coordenadaX1= coordenadaX1 +2;
+        tablero[coordenadaX1][coordenadaY1]="+";
+        historial=historial + "\n"+"El jugador 1 se movio hacia adelante";
+
+        
+
     }
     
 
