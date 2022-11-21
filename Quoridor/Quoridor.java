@@ -16,7 +16,7 @@ public class Quoridor {
 
     while (obj1.jug1Confirm.equals("True")) {
         try {
-            System.out.println("¿Que deseas hacer?"+"\n"+"(Escribe el numero correspondiente a la opcion para seleccionarla)"+"\n"+"\n"+"1. Moverte"+"\n"+"2. Colocar una barrera"+"\n"+"3. Salir del juego/rendirte");
+            System.out.println("¿Que deseas hacer?"+"\n"+"(Escribe el numero correspondiente a la opcion para seleccionarla)"+"\n"+"\n"+"1. Moverte"+"\n"+"2. Colocar una barrera"+"\n"+"3. EXIT");
             obj1.decision= Integer.parseInt(lector.readLine());
             if (obj1.decision==1) {
                 System.out.println("A que direccion deseas moverte?"+"\n"+"\n"+"(Escribe el numero correspondiente a la opcion para seleccionarla)"+"\n"+"1. Moverte hacia adelante"+"\n"+"2. Moverte hacia abajo"+"\n"+"3. Moverte hacia la derecha"+"\n"+"4. Moverte hacia la izquierda");
@@ -82,7 +82,7 @@ public class Quoridor {
                     obj1.BarreraJugador1();
                 }//fin controlador barreras
                 if(obj1.decision==3){
-                    System.out.println("\n"+"Juego interrumpido, ¡Es un empate!"+"\n");
+                    System.out.println("\n"+"Juego interrumpido"+"\n");
                     
                     break;
                 }//fin forfeit
@@ -94,7 +94,6 @@ public class Quoridor {
         obj1.jug1Confirm="False";
     }//fin while jugador 1
         if(obj1.decision==3){
-            System.out.println("\n"+"Juego interrumpido, ¡Es un empate!"+"\n");
             System.out.println("\n"+"Movimientos realizados:"+"\n");
             System.out.println(obj1.historial);
             obj1.juego="False";
@@ -111,7 +110,7 @@ public class Quoridor {
     while (obj1.jug2Confirm.equals("True")) {
         try {
             System.out.println("\n"+"Inicio del turno del segundo jugador");
-            System.out.println("¿Que deseas hacer?"+"\n"+"(Escribe el numero correspondiente a la opcion para seleccionarla)"+"\n"+"\n"+"1. Moverte"+"\n"+"2. Colocar una barrera"+"\n"+"3. Salir del juego/rendirte");
+            System.out.println("¿Que deseas hacer?"+"\n"+"(Escribe el numero correspondiente a la opcion para seleccionarla)"+"\n"+"\n"+"1. Moverte"+"\n"+"2. Colocar una barrera"+"\n"+"3. EXIT");
             obj1.decision= Integer.parseInt(lector.readLine());
             if (obj1.decision==1) {
                 System.out.println("A que direccion deseas moverte?"+"\n"+"\n"+"(Escribe el numero correspondiente a la opcion para seleccionarla)"+"\n"+"1. Moverte hacia adelante"+"\n"+"2. Moverte hacia abajo"+"\n"+"3. Moverte hacia la derecha"+"\n"+"4. Moverte hacia la izquierda");
@@ -181,7 +180,7 @@ public class Quoridor {
             }//fin controlador barreras
             
             if(obj1.decision==3){
-                System.out.println("\n"+"Juego interrumpido, ¡Es un empate!"+"\n");
+                System.out.println("\n"+"Juego interrumpido"+"\n");
                 break;
             }//fin forfeit
             obj1.jug2Confirm="False";
@@ -191,7 +190,6 @@ public class Quoridor {
         }
     }//fin while jugador 2
     if(obj1.decision==3){
-        System.out.println("\n"+"Juego interrumpido, ¡Es un empate!"+"\n");
         System.out.println("\n"+"Movimientos realizados:"+"\n");
         System.out.println(obj1.historial);
         obj1.juego="False";
