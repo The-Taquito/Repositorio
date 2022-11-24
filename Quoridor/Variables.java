@@ -1,3 +1,4 @@
+//Integrantes: Ezequiel Cruz, Anahit Navarro, Francesco Villacres, Amarilys Ayarza, Christopher Hart
 import java.io.*;
 public class Variables {
     String jug1= "+";
@@ -1276,7 +1277,32 @@ public class Variables {
         
 }
 public void PosicionJugador1(){
-    
+    int posicionJugX1;
+   for(int i=1; i<=coordenadaX1;i=i+2){
+    for(int j=1; j<=coordenadaY1;j=j+2){
+        if(i==coordenadaX1){
+            if(j==coordenadaY1){
+                posicionJugX1=(coordenadaX1+1)/2;
+                System.out.println("\n"+"La posicion actual del jugador 1 es: "+tablero[18][coordenadaY1]+posicionJugX1+"\n");
+                break;
+            }
+        }
+    }
+   }
+}
+public void PosicionJugador2(){
+    int posicionJugX2;
+   for(int i=1; i<=coordenadaX2;i=i+2){
+    for(int j=1; j<=coordenadaY2;j=j+2){
+        if(i==coordenadaX2){
+            if(j==coordenadaY2){
+                posicionJugX2=(coordenadaX2+1)/2;
+                System.out.println("\n"+"La posicion actual del jugador 2 es: "+tablero[18][coordenadaY2]+posicionJugX2+"\n");
+                break;
+            }
+        }
+    }
+   }
 }
     
 }

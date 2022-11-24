@@ -1,3 +1,4 @@
+//Integrantes: Ezequiel Cruz, Anahit Navarro, Francesco Villacres, Amarilys Ayarza, Christopher Hart
 import java.io.*;
 
 
@@ -19,6 +20,7 @@ public class Quoridor {
             System.out.println("¿Que deseas hacer?"+"\n"+"(Escribe el numero correspondiente a la opcion para seleccionarla)"+"\n"+"\n"+"1. Moverte"+"\n"+"2. Colocar una barrera"+"\n"+"3. EXIT");
             obj1.decision= Integer.parseInt(lector.readLine());
             if (obj1.decision==1) {
+                obj1.PosicionJugador1();
                 System.out.println("A que direccion deseas moverte?"+"\n"+"\n"+"(Escribe el numero correspondiente a la opcion para seleccionarla)"+"\n"+"1. Moverte hacia adelante"+"\n"+"2. Moverte hacia abajo"+"\n"+"3. Moverte hacia la derecha"+"\n"+"4. Moverte hacia la izquierda");
                 obj1.decisionMovimiento= Integer.parseInt(lector.readLine());
                 if(obj1.decisionMovimiento==1){
@@ -30,6 +32,7 @@ public class Quoridor {
                     System.out.println("\n"+"El jugador 1 se movio hacia adelante"+"\n");
                     obj1.ImprimirTablero();
                     obj1.decisionMovimiento=0;
+                    obj1.PosicionJugador1();
                     }
                 else if (obj1.decisionMovimiento==2) {
                     if(obj1.coordenadaX1==1){
@@ -44,6 +47,7 @@ public class Quoridor {
                     System.out.println("\n"+"El jugador 1 se movio hacia abajo"+"\n");
                     obj1.ImprimirTablero();
                     obj1.decisionMovimiento=0;
+                    obj1.PosicionJugador1();
                 }
                 else if(obj1.decisionMovimiento==3){
                     if(obj1.coordenadaY1==17){
@@ -58,6 +62,7 @@ public class Quoridor {
                     System.out.println("\n"+"El jugador 1 se movio hacia la derecha"+"\n");
                     obj1.ImprimirTablero();
                     obj1.decisionMovimiento=0;
+                    obj1.PosicionJugador1();
                 }
                 else if(obj1.decisionMovimiento==4){
                     if(obj1.coordenadaY1==1){
@@ -72,6 +77,7 @@ public class Quoridor {
                     System.out.println("\n"+"El jugador 1 se movio hacia la izquierda"+"\n");
                     obj1.ImprimirTablero();
                     obj1.decisionMovimiento=0;
+                    obj1.PosicionJugador1();
                 } 
                 else {
                     System.out.println("\n"+"Introduzca un numero valido"+"\n");
@@ -102,7 +108,7 @@ public class Quoridor {
 
         if(obj1.coordenadaX1==17) {
             System.out.println("¡Ganaste, jugador 1!");
-            System.out.println("\n"+"Movimientos realizados"+"\n"+obj1.historial); 
+            System.out.println("\n"+"Movimientos realizados: "+"\n"+obj1.historial); 
             break;
         }//Mensaje victoria jugador 1
 
@@ -113,6 +119,7 @@ public class Quoridor {
             System.out.println("¿Que deseas hacer?"+"\n"+"(Escribe el numero correspondiente a la opcion para seleccionarla)"+"\n"+"\n"+"1. Moverte"+"\n"+"2. Colocar una barrera"+"\n"+"3. EXIT");
             obj1.decision= Integer.parseInt(lector.readLine());
             if (obj1.decision==1) {
+                obj1.PosicionJugador2();
                 System.out.println("A que direccion deseas moverte?"+"\n"+"\n"+"(Escribe el numero correspondiente a la opcion para seleccionarla)"+"\n"+"1. Moverte hacia adelante"+"\n"+"2. Moverte hacia abajo"+"\n"+"3. Moverte hacia la derecha"+"\n"+"4. Moverte hacia la izquierda");
                 obj1.decisionMovimiento= Integer.parseInt(lector.readLine());
                 
@@ -125,6 +132,7 @@ public class Quoridor {
                     System.out.println("\n"+"El jugador 2 se movio hacia adelante"+"\n");
                     obj1.ImprimirTablero();
                     obj1.decisionMovimiento=0;
+                    obj1.PosicionJugador2();
                 }
                 else if(obj1.decisionMovimiento==2){
                     if(obj1.coordenadaX2==17){
@@ -139,6 +147,7 @@ public class Quoridor {
                     System.out.println("\n"+"El jugador 2 se movio hacia abajo"+"\n");
                     obj1.ImprimirTablero();
                     obj1.decisionMovimiento=0;
+                    obj1.PosicionJugador2();
                     
                 }
                 else if(obj1.decisionMovimiento==3){
@@ -154,6 +163,7 @@ public class Quoridor {
                     System.out.println("\n"+"El jugador 2 se movio hacia la derecha"+"\n");
                     obj1.ImprimirTablero();
                     obj1.decisionMovimiento=0;
+                    obj1.PosicionJugador2();
                 }
                 else  if(obj1.decisionMovimiento==4){
                     if(obj1.coordenadaY2==1){
@@ -168,6 +178,7 @@ public class Quoridor {
                     System.out.println("\n"+"El jugador 2 se movio hacia la izquierda"+"\n");
                     obj1.ImprimirTablero();
                     obj1.decisionMovimiento=0;
+                    obj1.PosicionJugador2();
                 }
                 else{
                     System.out.println("Introduzca un numero valido");
@@ -197,7 +208,7 @@ public class Quoridor {
     }//fin forfeit
     if(obj1.coordenadaX2==1) {
         System.out.println("¡Ganaste, jugador 2!");
-        System.out.println("\n"+"Movimientos realizados"+"\n"+obj1.historial); 
+        System.out.println("\n"+"Movimientos realizados: "+"\n"+obj1.historial); 
         break;
     }
     
